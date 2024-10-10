@@ -17,6 +17,10 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="auth-buttons">
+        <button class="btn login-btn" id="loginBtn">Login</button>
+        <button class="btn signup-btn" id="signupBtn">Sign Up</button>
+      </div>
     </div>
   </nav>
 
@@ -105,11 +109,38 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+   <footer>
     <div class="container">
       <p>© 2024 Exonetra. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeLogin">&times;</span>
+      <h2>Login</h2>
+      <form>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeSignup">&times;</span>
+      <h2>Sign Up</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
 
   <script src="scripts.js"></script>
 </body>
