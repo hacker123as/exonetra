@@ -1,4 +1,201 @@
 /* General Styles (Same as before) */
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e3a8a;
+  padding: 20px 0;
+}
+
+.navbar .logo {
+  color: #fff;
+  float: left;
+  font-size: 1.8em;
+}
+
+.navbar .nav-links {
+  float: right;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.3em;
+  margin-bottom: 40px;
+}
+
+.hero-buttons .btn {
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.hero-buttons .btn.secondary-btn {
+  background-color: #6b7280;
+}
+
+.hero-buttons .btn:hover {
+  opacity: 0.9;
+}
+
+/* Features Section */
+.features-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.feature {
+  max-width: 250px;
+}
+
+.feature img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background-color: #1e3a8a;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pricing-card {
+  background-color: #374151;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.pricing-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.pricing-card p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-card ul li {
+  margin: 10px 0;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: auto;
+}
+
+#contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+}
+
+#contact-form button {
+  padding: 15px 30px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  padding: 20px 0;
+  text-align: center;
+}
 
 /* Auth Buttons */
 .auth-buttons {
