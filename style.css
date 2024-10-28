@@ -60,13 +60,13 @@ body {
 
 .cta-button {
     display: inline-block; /* Make it inline block to behave like a button */
-    background-color: #ff3b30; /* Button background color */
-    color: white; /* Text color */
-    padding: 12px 25px; /* Button padding */
+  background-color: #ff5722;
+     color: #fff;
+    padding: 12px 30px;
     border: none; /* No border */
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 25px;
     font-size: 1.2em; /* Font size */
-    margin-top: 30px; /* Margin above the button */
+    margin-top: 20px;
     cursor: pointer; /* Pointer cursor on hover */
     text-decoration: none; /* Remove underline from the link */
     text-align: center; /* Center the text */
