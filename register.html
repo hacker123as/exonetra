@@ -52,4 +52,35 @@
 </footer>
 
 </body>
+
+// Add this script tag in the head of your HTML files
+<script>
+    // Function to check construction status and redirect if necessary
+    async function checkConstructionStatus() {
+        try {
+            // Fetch the construction status from the API
+            const response = await fetch('https://www.exonetra.com/api/Construction');
+            const data = await response.json();
+
+            // Check if the site is under construction
+            if (data.UnderConstruction) {
+                // Get the current page's URL
+                const currentPage = window.location.pathname.split('/').pop(); // Extracts the page name (e.g., index.html)
+
+                // Check if the current page is included in the redirection logic
+                if (data.Pages === 'all' || data.Pages.includes(currentPage)) {
+                    // Redirect to the Under Construction page
+                    window.location.href = 'https://www.exonetra.com/UnderConstruction';
+                }
+            }
+        } catch (error) {
+            console.error('Error fetching construction status:', error);
+        }
+    }
+
+    // Execute the function when the page loads
+    window.onload = checkConstructionStatus;
+</script>
+
+
 </html>
