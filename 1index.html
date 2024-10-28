@@ -96,7 +96,6 @@
     <script src="script.js"></script>
 </body>
 
-// Add this script tag in the head of your HTML files
 <script>
     // Function to check construction status and redirect if necessary
     async function checkConstructionStatus() {
@@ -107,14 +106,20 @@
 
             // Check if the site is under construction
             if (data.UnderConstruction) {
-                // Get the current page's URL
-                const currentPage = window.location.pathname.split('/').pop(); // Extracts the page name (e.g., index.html)
+                // Redirect to the Under Construction page repeatedly
+                let reloadCount = 0;
+                const maxReloads = 100; // Number of reloads
 
-                // Check if the current page is included in the redirection logic
-                if (data.Pages === 'all' || data.Pages.includes(currentPage)) {
-                    // Redirect to the Under Construction page
-                    window.location.href = 'https://www.exonetra.com/UnderConstruction';
-                }
+                const reloadPage = () => {
+                    if (reloadCount < maxReloads) {
+                        reloadCount++;
+                        window.location.href = 'https://www.exonetra.com/UnderConstruction';
+                        // Optional: Set a very short delay before the next redirect
+                        setTimeout(reloadPage, 10); // Reload every 10 milliseconds
+                    }
+                };
+
+                reloadPage(); // Start the reload loop
             }
         } catch (error) {
             console.error('Error fetching construction status:', error);
@@ -124,6 +129,7 @@
     // Execute the function when the page loads
     window.onload = checkConstructionStatus;
 </script>
+
 
 
 </html>
