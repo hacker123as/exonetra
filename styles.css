@@ -1,11 +1,10 @@
-/* General Styles (Same as before) */
 /* General Styles */
 body, html {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #121212;
-  color: #fff;
+  background-color: #f7f7f7; /* Light gray background */
+  color: #333; /* Dark gray text for readability */
 }
 
 .container {
@@ -15,14 +14,16 @@ body, html {
 
 /* Navbar */
 .navbar {
-  background-color: #1e3a8a;
+  background-color: #ffffff; /* White background for a clean navbar */
   padding: 20px 0;
+  border-bottom: 1px solid #ddd; /* Subtle border for definition */
 }
 
 .navbar .logo {
-  color: #fff;
+  color: #1e3a8a; /* Dark blue logo color */
   float: left;
   font-size: 1.8em;
+  font-weight: bold;
 }
 
 .navbar .nav-links {
@@ -35,22 +36,22 @@ body, html {
 }
 
 .navbar .nav-links a {
-  color: #fff;
+  color: #333;
   text-decoration: none;
   font-size: 1.1em;
+  font-weight: 500;
 }
 
-.navbar::after {
-  content: "";
-  display: table;
-  clear: both;
+.navbar .nav-links a:hover {
+  color: #1e3a8a; /* Blue on hover */
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  background: linear-gradient(to right, #e2e8f0, #edf2f7); /* Light gradient */
   padding: 100px 0;
   text-align: center;
+  color: #1e3a8a; /* Dark blue for text */
 }
 
 .hero h1 {
@@ -64,31 +65,35 @@ body, html {
 }
 
 .hero-buttons .btn {
-  background-color: #4f46e5;
+  background-color: #3182ce; /* Blue button */
   color: #fff;
   padding: 15px 30px;
   border: none;
+  border-radius: 5px;
   text-decoration: none;
   margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-buttons .btn.secondary-btn {
-  background-color: #6b7280;
+  background-color: #63b3ed;
 }
 
 .hero-buttons .btn:hover {
-  opacity: 0.9;
+  background-color: #2b6cb0;
 }
 
 /* Features Section */
 .features-section {
   padding: 50px 0;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .features-section h2 {
   font-size: 2.5em;
   margin-bottom: 40px;
+  color: #1e3a8a;
 }
 
 .features-grid {
@@ -99,20 +104,22 @@ body, html {
 
 .feature {
   max-width: 250px;
+  padding: 20px;
 }
 
 .feature img {
-  width: 100px;
+  width: 80px;
   margin-bottom: 20px;
 }
 
 .feature h3 {
   font-size: 1.5em;
+  color: #333;
 }
 
 /* Pricing Section */
 .pricing-section {
-  background-color: #1e3a8a;
+  background-color: #e2e8f0;
   padding: 50px 0;
   text-align: center;
 }
@@ -120,6 +127,7 @@ body, html {
 .pricing-section h2 {
   font-size: 2.5em;
   margin-bottom: 40px;
+  color: #1e3a8a;
 }
 
 .pricing-grid {
@@ -128,19 +136,28 @@ body, html {
 }
 
 .pricing-card {
-  background-color: #374151;
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
   max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .pricing-card h3 {
   font-size: 1.8em;
+  color: #1e3a8a;
   margin-bottom: 20px;
 }
 
 .pricing-card p {
-  font-size: 1.5em;
+  font-size: 1.2em;
+  color: #333;
   margin-bottom: 20px;
 }
 
@@ -151,17 +168,20 @@ body, html {
 
 .pricing-card ul li {
   margin: 10px 0;
+  color: #555;
 }
 
 /* Contact Section */
 .contact-section {
   padding: 50px 0;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .contact-section h2 {
   font-size: 2.5em;
   margin-bottom: 40px;
+  color: #1e3a8a;
 }
 
 #contact-form {
@@ -173,21 +193,23 @@ body, html {
   width: 100%;
   padding: 15px;
   margin: 10px 0;
-  background-color: #1f2937;
-  color: #fff;
-  border: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
 }
 
 #contact-form button {
   padding: 15px 30px;
-  background-color: #4f46e5;
+  background-color: #3182ce;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 #contact-form button:hover {
-  opacity: 0.9;
+  background-color: #2b6cb0;
 }
 
 /* Footer */
@@ -195,6 +217,16 @@ footer {
   background-color: #1e3a8a;
   padding: 20px 0;
   text-align: center;
+  color: #fff;
+}
+
+footer a {
+  color: #63b3ed;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Auth Buttons */
@@ -206,14 +238,15 @@ footer {
 .auth-buttons .btn {
   margin-left: 10px;
   padding: 10px 20px;
-  background-color: #4f46e5;
+  background-color: #3182ce;
   color: #fff;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .auth-buttons .btn:hover {
-  opacity: 0.9;
+  background-color: #2b6cb0;
 }
 
 /* Modal Styles */
@@ -229,13 +262,14 @@ footer {
 }
 
 .modal-content {
-  background-color: #1f2937;
-  color: #fff;
+  background-color: #ffffff;
+  color: #333;
   margin: 10% auto;
   padding: 20px;
   width: 80%;
   max-width: 400px;
   border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .modal-content h2 {
@@ -247,28 +281,30 @@ footer {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  background-color: #374151;
-  border: none;
-  color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #333;
 }
 
 .modal-content button {
   width: 100%;
   padding: 10px;
-  background-color: #4f46e5;
+  background-color: #3182ce;
   border: none;
+  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
 }
 
 .modal-content button:hover {
-  opacity: 0.9;
+  background-color: #2b6cb0;
 }
 
 .close {
   float: right;
   font-size: 1.5em;
   cursor: pointer;
-  color: #fff;
+  color: #333;
 }
 
 .close:hover {
