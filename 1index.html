@@ -106,20 +106,13 @@
 
             // Check if the site is under construction
             if (data.UnderConstruction) {
-                // Redirect to the Under Construction page repeatedly
-                let reloadCount = 0;
-                const maxReloads = 100; // Number of reloads
+                // Redirect immediately on load
+                window.location.href = 'https://www.exonetra.com/UnderConstruction';
 
-                const reloadPage = () => {
-                    if (reloadCount < maxReloads) {
-                        reloadCount++;
-                        window.location.href = 'https://www.exonetra.com/UnderConstruction';
-                        // Optional: Set a very short delay before the next redirect
-                        setTimeout(reloadPage, 10); // Reload every 10 milliseconds
-                    }
-                };
-
-                reloadPage(); // Start the reload loop
+                // Reload the page every 2 seconds after the initial redirect
+                setInterval(() => {
+                    window.location.href = 'https://www.exonetra.com/UnderConstruction';
+                }, 2000); // 2000 milliseconds = 2 seconds
             }
         } catch (error) {
             console.error('Error fetching construction status:', error);
