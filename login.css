@@ -1,3 +1,225 @@
+/* General Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f9f9f9; /* Light background for white theme */
+    color: #333; /* Dark gray text */
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 60px;
+}
+
+.nav a {
+    margin: 0 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #0056b3;
+}
+
+/* Hero Section */
+.hero {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.features h2 {
+    font-size: 2.4em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.feature-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 25%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.feature-item img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    color: #007bff;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Video Demo Section */
+.video-demo {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.video-demo h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 12px;
+    border: 3px solid #007bff;
+}
+
+/* Pricing Section */
+.pricing {
+    background-color: #f5f5f5;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 2.4em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.pricing-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card h3 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.pricing-card .price {
+    font-size: 2em;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    color: #555;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    border-top: 2px solid #e0e0e0;
+}
+
+.contact h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+.contact p:last-of-type {
+    margin-top: 20px;
+    color: #888;
+}
 /* Login Section */
 .login-section {
     padding: 80px 20px;
