@@ -1,222 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exonetra - Your Secure DNS</title>
-    <style>
-        /* Blue and Red Theme */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0a0a23; /* Dark blue background */
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #0d1b3d; /* Dark navy blue */
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-        }
-        nav {
-            margin-top: 10px;
-        }
-        nav a {
-            margin: 0 20px;
-            color: #ff3b30; /* Bright red for secondary elements */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        .hero {
-            background-color: #14204b; /* Blue shade */
-            padding: 80px 20px;
-            text-align: center;
-            border-bottom: 4px solid #ff3b30;
-        }
-        .hero h2 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #ffffff;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-top: 20px;
-        }
-        .button {
-            background-color: #ff3b30;
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.2em;
-            margin-top: 30px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #ff584d;
-        }
-        .video-box {
-            display: flex;
-            justify-content: center;
-            padding: 50px 0;
-            background-color: #0d1b3d;
-        }
-        .video-box iframe {
-            width: 100%;
-            max-width: 1000px; /* Larger video box */
-            height: 500px;
-            border-radius: 15px;
-            border: 4px solid #ff3b30;
-        }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 60px 20px;
-            background-color: #14204b;
-            text-align: center;
-            border-top: 4px solid #ff3b30;
-            border-bottom: 4px solid #ff3b30;
-        }
-        .features div {
-            width: 25%;
-        }
-        .features img {
-            width: 70px;
-            height: 70px;
-        }
-        .features h3 {
-            margin-top: 15px;
-            font-size: 1.5em;
-            color: #ff3b30;
-        }
-        .pricing {
-            background-color: #0a0a23;
-            padding: 60px 20px;
-            text-align: center;
-            color: #ffffff;
-        }
-        .pricing h2 {
-            color: #ff3b30;
-            font-size: 2.2em;
-        }
-        .pricing-table {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-        .plan {
-            background-color: #14204b;
-            border: 3px solid #ff3b30;
-            border-radius: 15px;
-            padding: 40px;
-            width: 30%;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .plan:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-        }
-        .plan h3 {
-            font-size: 1.8em;
-            color: #ff3b30;
-        }
-        .plan p {
-            font-size: 1.1em;
-            margin: 15px 0;
-            color: #ffffff;
-        }
-        footer {
-            background-color: #0d1b3d;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        footer a {
-            color: #ff3b30;
-            text-decoration: none;
-        }
-    </style>
+    <meta name="description" content="Exonetra - Secure, Reliable DNS Protection">
+    <title>Exonetra - Premium DNS Protection</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo"><img src="images/logo.png" alt="Exonetra Logo"></div>
+        <nav class="nav">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-<header>
-    <h1>Exonetra: Your Secure DNS Against Malicious Websites</h1>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <h2>Protecting you from viruses, phishing attacks, and malicious websites with real-time AI-powered detection.</h2>
-    <p>Email us at <strong>support@exonetra.com</strong> to test the demo!</p>
-    <button class="button">Try the Demo</button>
-</section>
-
-<section class="video-box">
-    <iframe src="https://www.youtube.com/embed/fGYinuOzq64" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<section class="features">
-    <div>
-        <img src="https://img.icons8.com/clouds/100/000000/shield.png" alt="Real-time Threat Detection">
-        <h3>Real-time Threat Detection</h3>
-        <p>Blocks viruses, phishing, and malicious websites before they can harm your device.</p>
-    </div>
-    <div>
-        <img src="https://img.icons8.com/clouds/100/000000/privacy.png" alt="Privacy Protection">
-        <h3>Privacy Protection</h3>
-        <p>Your data is secure with no logs, full encryption, and privacy-first design.</p>
-    </div>
-    <div>
-        <img src="https://img.icons8.com/clouds/100/000000/settings.png" alt="Easy Setup">
-        <h3>Easy Setup</h3>
-        <p>Quick and easy setup for both home and enterprise users with step-by-step guidance.</p>
-    </div>
-</section>
-
-<section class="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="pricing-table">
-        <div class="plan">
-            <h3>Home User</h3>
-            <p><strong>$29.99</strong></p>
-            <p>5 Devices</p>
-            <p>Basic DNS Protection</p>
-            <p>Phishing & Malware Blocking</p>
-            <p>24/7 Support</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Protecting You from Online Threats</h1>
+            <p>Experience real-time, AI-powered security against viruses, phishing, and malicious websites.</p>
+            <button class="cta-button">Get Started</button>
         </div>
-        <div class="plan">
-            <h3>Enterprise</h3>
-            <p>10 - 500,000 Devices</p>
-            <p>Advanced DNS Protection</p>
-            <p>Admin Dashboard Access</p>
-            <p>Enterprise Network Monitoring</p>
-            <p>Custom Domain Blocking</p>
-            <p>Contact us at <strong>support@exonetra.com</strong> for pricing</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2>Our Features</h2>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <img src="images/security-icon.svg" alt="Real-time Threat Detection">
+                <h3>Real-time Threat Detection</h3>
+                <p>AI-driven protection to block threats before they reach you.</p>
+            </div>
+            <div class="feature-item">
+                <img src="images/privacy-icon.svg" alt="Privacy Protection">
+                <h3>Privacy Protection</h3>
+                <p>Your data is safe with us — encrypted and private.</p>
+            </div>
+            <div class="feature-item">
+                <img src="images/setup-icon.svg" alt="Easy Setup">
+                <h3>Easy Setup</h3>
+                <p>Start protecting your devices in just a few clicks.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <p>Contact us: <a href="mailto:extro@ddd.com">extro@ddd.com</a></p>
-    <p>&copy; 2024 Exonetra</p>
-</footer>
+    <!-- Video Demo Section -->
+    <section class="video-demo">
+        <h2>See Exonetra in Action</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/fGYinuOzq64" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
 
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price">$29.99/month</p>
+                <p>Up to 5 devices</p>
+                <p>Standard protection</p>
+                <p>24/7 Support</p>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="price">Custom Pricing</p>
+                <p>Unlimited devices</p>
+                <p>Advanced protection</p>
+                <p>Dedicated Support</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:support@exonetra.com">support@exonetra.com</a></p>
+        <p>Phone: 1-800-EXONET</p>
+        <p>&copy; 2024 Exonetra. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
