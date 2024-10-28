@@ -1,103 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Construction</title>
-  <style>
-    /* General Styles */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #fff;
-      text-align: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .under-construction-container {
-      max-width: 600px;
-      background-color: #1f2937;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      color: #4f46e5;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 20px;
-    }
-
-    .contact-info {
-      font-size: 1.1em;
-      color: #4f46e5;
-    }
-
-    .contact-info a {
-      color: #3b82f6;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    .construction-icon {
-      font-size: 4em;
-      margin-bottom: 20px;
-      color: #3b82f6;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Under Construction - Exonetra</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main stylesheet -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9; /* Light background color */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            color: #ff3b30; /* Bright red color */
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .status-icon {
+            width: 150px; /* Set desired width */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 20px; /* Space below the image */
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="under-construction-container">
-    <div class="construction-icon">🚧</div>
-    <h1>We're Working On It!</h1>
-    <p>Our site is currently under construction. We'll be up and running soon!</p>
-    <p class="contact-info">For any inquiries, contact us at <a href="mailto:support@exonetra.com">support@exonetra.com</a></p>
-  </div>
+<img src="https://github.com/hacker123as/exonetra/blob/main/image_2024-10-28_224930424.png?raw=true" alt="Under Construction" class="status-icon"> <!-- Replace with actual image URL -->
+<h1>Under Construction</h1>
+<p>We're currently working hard to bring you a new experience.<br>Our website will be up soon!</p>
+
+<footer>
+    <p>&copy; 2024 Exonetra. All rights reserved.</p>
+</footer>
 
 </body>
 
-// Add this script tag in the head of your HTML files
-<script>
-    // Function to check construction status and redirect if necessary
-    async function checkConstructionStatus() {
-        try {
-            // Fetch the construction status from the API
-            const response = await fetch('https://www.exonetra.com/api/Construction');
-            const data = await response.json();
+  <script>
+        (async function() {
+            try {
+                // Fetch the construction status from the API
+                const response = await fetch('https://www.exonetra.com/api/Construction');
+                const data = await response.json();
 
-            // Check if the site is under construction
-            if (data.UnderConstruction) {
-                // Get the current page's URL
-                const currentPage = window.location.pathname.split('/').pop(); // Extracts the page name (e.g., index.html)
-
-                // Check if the current page is included in the redirection logic
-                if (data.Pages === 'all' || data.Pages.includes(currentPage)) {
-                    // Redirect to the Under Construction page
+                // Check if the site is under construction
+                if (data.UnderConstruction) {
+                    // Redirect immediately
                     window.location.href = 'https://www.exonetra.com/UnderConstruction';
+                    
+                    // Reload the page every 2 seconds after the initial redirect
+                    setInterval(() => {
+                        window.location.href = 'https://www.exonetra.com/UnderConstruction';
+                    }, 2000); // 2000 milliseconds = 2 seconds
                 }
+            } catch (error) {
+                console.error('Error fetching construction status:', error);
             }
-        } catch (error) {
-            console.error('Error fetching construction status:', error);
-        }
-    }
-
-    // Execute the function when the page loads
-    window.onload = checkConstructionStatus;
-</script>
-
+        })(); // IIFE to execute the function immediately
+    </script>
 
 </html>
