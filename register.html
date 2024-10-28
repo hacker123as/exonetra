@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Exonetra</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="https://github.com/hacker123as/exonetra/blob/main/WhatsApp%20Image%202024-10-10%20at%2017.54.02_e6184466.jpg?raw=true" alt="Exonetra Logo">
+    </div>
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="register-section">
+    <h2>Create Your Account</h2>
+    <form action="register_process.php" method="post" class="register-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <button type="submit" class="cta-button">Register</button>
+    </form>
+    <p class="additional-links">
+        Already have an account? <a href="login.html">Login here</a>
+    </p>
+</section>
+
+<footer class="contact">
+    <p>Contact us: <a href="mailto:support@exonetra.com">support@exonetra.com</a></p>
+    <p>&copy; 2024 Exonetra</p>
+</footer>
+
+</body>
+</html>
