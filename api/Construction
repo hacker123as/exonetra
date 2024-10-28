@@ -1,4 +1,4 @@
 {
     "UnderConstruction": true,
-    "Pages": ["index.html", "login.html"] // or "all" for universal redirection
+    "Pages": ["all"] // or "all" for universal redirection
 }
