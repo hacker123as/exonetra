@@ -33,3 +33,10 @@ window.onclick = function(event) {
     signupModal.style.display = 'none';
   }
 }
+// Select the button
+const youtubeButton = document.getElementById('youtubeButton');
+
+// Add a click event listener to the button
+youtubeButton.addEventListener('click', () => {
+    window.open('https://www.youtube.com', '_blank');
+});
