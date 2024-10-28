@@ -1,4 +1,3 @@
 {
-    "UnderConstruction": true,
-    "Pages": ["all"] // or "all" for universal redirection
+    "UnderConstruction": true
 }
